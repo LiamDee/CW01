@@ -1,8 +1,10 @@
 import java.util.Scanner;
+import java.util.logging.Logger;
 
 class Dec2Hex
 {
     public static int Arg1;
+    static Logger logger = Logger.getLogger(Dec2Hex.class.getName());
     public static void main(String args[])    {
         /* checking if a parameter was provided */
         if (args.length == 0) {
@@ -28,7 +30,7 @@ class Dec2Hex
         }
         /* if parameter isn't of type int */
         catch (NumberFormatException e) {
-            System.out.println("Argument provided is not an integer");
+            logger.info("Argument provided is not an integer");
             System.exit(0);
         }
     }
