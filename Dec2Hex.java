@@ -1,9 +1,15 @@
 import java.util.Scanner;
 
-class Dec2Hex
+class Dec2HexCommit1
 {
-public static int Arg1;
+    public static int Arg1;
     public static void main(String args[])    {
+        /* checking if a parameter was provided */
+        if (args.length == 0) {
+            System.out.println("No argument provided");
+            System.exit(0);
+        }
+
         Arg1 = Integer.parseInt(args[0]);
         char ch[]={'0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
         int rem, num;
@@ -22,3 +28,4 @@ public static int Arg1;
 
     }
 }
+
